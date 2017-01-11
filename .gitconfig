@@ -1,0 +1,10 @@
+[alias]
+  st = status
+  ci = commit
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  patch = commit --amend --no-edit --reset-author
+
+[user]
+  email = alberto.rdrz@gmail.com
+  name = alberto
