@@ -6,5 +6,20 @@
   patch = commit --amend --no-edit --reset-author
 
 [user]
-  email = alberto.rdrz@gmail.com
-  name = alberto
+	email = 
+	name = alberto
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[core]
+	excludesfile = /Users/alberto/.gitignore_global
+[commit]
+	template = /Users/alberto/.stCommitMsg

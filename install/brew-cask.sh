@@ -34,5 +34,7 @@ apps=(
   imagealpha
   imageoptim
   visual-studio-code
+  plex-media-player
+  cyberduck
 )
 brew cask install "${apps[@]}"
